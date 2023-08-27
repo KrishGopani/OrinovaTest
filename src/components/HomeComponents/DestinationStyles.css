@@ -1,0 +1,109 @@
+.destination {
+  margin: 4rem 6rem;
+}
+
+/* ⭐⭐⭐⭐⭐⭐⭐ */
+@media (min-width: 1536px){
+.destination {
+    max-width: 1280px;
+    margin: auto;
+}}
+
+.destination h1 {
+  font-size: 3rem;
+}
+
+.first-des {
+  /* to diplay things in same row instead of column we use "display flex" */
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4.5rem;
+}
+
+/* popular desti ka second part reverse karne ke liye */
+.first-des-reverse {
+  /* to diplay things in same row instead of column we use "display flex" */
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4.5rem;
+
+  flex-direction: row-reverse;
+}
+
+.des-text {
+  width: 45%;
+  text-align: start;
+  font-size: 1.1rem;
+}
+
+.des-text h2 {
+  padding-bottom: 1rem;
+}
+
+.image {
+  position: relative;
+  width: 50%;
+
+  /* for both img in same row */
+  display: flex;
+
+  justify-content: space-between;
+  z-index: -99;
+}
+.image img {
+  /* images are using its original height and width but we dont want that */
+  width: 49%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: -1px 1px 62px -18px rgba(0, 0, 0, 0.19);
+}
+
+/* targeting second image */
+.image img:nth-child(2) {
+  position: absolute;
+  top: -10%;
+  right: 0;
+}
+
+@media screen and (max-width: 850px) {
+  .destination {
+    margin: 4rem 2rem;
+  }
+  .first-des {
+    /* to diplay things in same row instead of column we use "display flex" */
+    display: flex;
+
+    /* this will align content in a single column but will reverse the posi of img and text that is phele img the text */
+    flex-direction: column-reverse;
+
+    margin-top: 2.5rem;
+  }
+
+  .des-text {
+    /* text puri width lele */
+    width: 100%;
+  }
+  .image {
+    /* img puri width lele */
+    width: 100%;
+    margin: 1.8rem 0;
+  }
+
+  .image img {
+    height: 250px;
+  }
+
+  .first-des-reverse {
+    /* to diplay things in same row instead of column we use "display flex" */
+    display: flex;
+
+    margin-top: 2.5rem;
+
+    flex-direction: column-reverse;
+  }
+}

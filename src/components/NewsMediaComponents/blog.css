@@ -1,0 +1,149 @@
+.blog {
+    padding-inline: 4rem;
+    /* margin: 4rem 0; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 4rem
+    
+}
+
+.blog .blog__heading {
+    opacity: 0.5;
+    letter-spacing: 4px;
+}
+
+.blog h2 {
+    font-family: var(--ff-heading);
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 3.5rem;
+}
+
+.blog__images {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+}
+
+.blog__img {
+    color: var(--clr-white);
+    width: 100%;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2rem;
+    border-radius: 1rem;
+    gap: 1rem;
+    box-shadow: var(--box-shadow);
+}
+
+.blog__img:hover {
+    filter: opacity(0.5);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.blog__img span {
+    font-size: 0.8rem;
+}
+
+.blog__img p {
+    font-weight: 600;
+}
+
+.blog__img-one {
+    background-image: url("https://cdn.pixabay.com/photo/2019/06/30/21/36/newsletter-4308826_960_720.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.blog__img-two {
+    background-image: url("https://cdn.pixabay.com/photo/2016/09/28/18/12/smartphone-1701086_960_720.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 885px) {
+    .blog__images {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .blog {
+        padding-inline: 1rem;
+    }
+}
+
+
+:root {
+    /* font family for headings */
+    --ff-heading: 'Merriweather', serif;
+
+    /* colors */
+    --clr-blue: rgb(8, 137, 255);       /* #0889FF */
+    --clr-purple: rgb(92, 62, 254);     /* #5C3EFE */
+    --clr-yellow: rgb(253, 198, 13);    /* #FDC60D */
+    --clr-orange: rgb(241, 123, 57);    /* #F17B39 */
+    --clr-white: #ffffff;
+    --clr-black: rgb(0, 0, 0);
+
+    /* box shadow */
+    --box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.3);
+}
+
+
+/********** General Styling **********/
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--clr-white);
+}
+
+.container {
+    max-width: 1536px;
+    width: 100%;
+    padding-inline: 1rem;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 7rem;
+    position: fixed;
+    z-index: 15;
+    background-color: var(--clr-white);
+}
+
+.header-shadow {
+    box-shadow: var(--box-shadow);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+} */

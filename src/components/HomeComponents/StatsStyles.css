@@ -1,0 +1,18 @@
+.stat > :nth-child(1) {
+    font-size: 2rem;
+  }
+  
+  .stat > :nth-child(1) > :last-child {
+    /* color: orange; */
+    color: orange;
+  }
+  
+  @media (max-width: 640px) {
+    .stat > :nth-child(1) {
+      font-size: 1.5rem;
+    }
+    .stat > :nth-child(2) {
+      font-size: 0.8rem;
+    }
+  }
+  
